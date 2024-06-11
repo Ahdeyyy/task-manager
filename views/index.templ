@@ -1,0 +1,22 @@
+package views
+
+templ Home(name string) {
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/build.css" rel="stylesheet">
+	<script src="/htmx.min.js"></script>
+
+    <title>Task Manager</title>
+</head>
+<body class="container p-4 mx-auto" >
+	<div class="bg-red-500 rounded-md p-4" >Hello { name }</div>
+    <button hx-get="/clicked">
+    	 Click Me
+	</button>
+</body>
+</html>
+}
+

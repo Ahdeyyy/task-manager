@@ -1,0 +1,17 @@
+{
+  "name": "task-manager",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4"
+  },
+  "scripts": {
+    "build": "bunx tailwindcss -i ./static/main.css -o ./static/build.css --minify"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
