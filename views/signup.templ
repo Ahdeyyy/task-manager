@@ -1,0 +1,37 @@
+package views
+
+templ Signup(errorMsg string) {
+	@App() {
+		<main class="flex justify-center ">
+			<form class="card w-96 bg-base-100 shadow-xl" hx-post="/users/create">
+				<div class="space-y-4  card-body">
+					<h2 class="card-title text-center">Signup</h2>
+					<label class="input input-bordered flex items-center gap-2">
+						Username
+						<input type="text" name="username" id="username" class="grow" placeholder="John Doe"/>
+					</label>
+					<label class="input input-bordered flex items-center gap-2">
+						Email
+						<input name="email" id="email" type="email" class="grow" placeholder="doe@mail.com"/>
+					</label>
+					<label class="input input-bordered flex items-center gap-2">
+						Password
+						<input name="password" id="password" type="password" class="grow" placeholder="password"/>
+					</label>
+					if errorMsg != "" {
+						<div class="bg-error p-3 rounded">
+							<p class="text-error-content">
+								{ errorMsg }
+							</p>
+						</div>
+					}
+					<div class="card-actions justify-end">
+						<button class="btn btn-primary " type="submit">
+							Submit
+						</button>
+					</div>
+				</div>
+			</form>
+		</main>
+	}
+}
